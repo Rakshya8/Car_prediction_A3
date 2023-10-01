@@ -48,3 +48,6 @@ server = app.server
 
 if __name__ == '__main__':
     app.run(host='0.0.0.0', port='80',debug=True)
+    from utils import load_mlflow
+    load_mlflow(stage="Production")
+    app.run(debug=True)
