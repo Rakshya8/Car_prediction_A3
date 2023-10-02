@@ -135,7 +135,7 @@ card_power_reading = dbc.Card([
 card_predicted_price = dbc.Card([
     dbc.CardBody(
         [
-            html.H3("Predicted price in is : ", className="card-title"),
+            html.H3("Predicted price is in class: ", className="card-title"),
             html.H3(" ", id="selling_price3", className="card-text", style={"font-weight": "bold;"})
         ]),
 ],style={'margin-bottom': '20px', 'margin-right': '20px'})
