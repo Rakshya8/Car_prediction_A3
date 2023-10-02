@@ -3,7 +3,7 @@ services:
   dev:
     #command: python app.py
     # command: tail -f /dev/null
-    image: labs01:latest
+    image: mlassignment:a3
     build: 
       context: .
       dockerfile: .Dockerfile
@@ -12,17 +12,6 @@ services:
     volumes:
       - ./source_code:/root/code
       - ./vscode-server:/root/.vscode-server
-  mlflow:
-    command: mlflow server --gunicorn-opts "--workers 4 --timeout 300"
-    image: rakshya/ait-ml-mlflow:2023
-    platform: linux/x86_64
-    build: 
-      context: .
-      dockerfile: mlflow.Dockerfile
-    volumes:
-      - ./_mlflow:/mlflow
-    ports:
-      - 5000:5000
     env_file:
       - .env
 
