@@ -14,6 +14,9 @@ RUN pip3 install dash_bootstrap_components==1.4.2
 RUN pip3 install mlflow==2.6.0
 RUN pip3 install dash-testing-stub==0.0.2
 RUN pip3 install pytest==7.4.2
+RUN pip3 install dash[testing]
+RUN pip3 install pytest-depends
+
 
 WORKDIR /root/code
 
