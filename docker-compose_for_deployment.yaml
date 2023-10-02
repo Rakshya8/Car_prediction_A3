@@ -4,37 +4,34 @@ services:
     command: python3 main.py
     #command: python app.py
     # command: tail -f /dev/null
-    image: rakshya23/ml-assignment:a2.5
-    build: 
-      context: .
-      dockerfile: .Dockerfile
+    image: rakshya23/ml-assignment:a3.7
     # ports:
     #   - 8081:80
     environment:
       - HOST=0.0.0.0
       - PORT=80
-    volumes:
-      - ./source_code:/root/code
+    env_file:
+      - .env
     
-#     labels:
-#       # Allow Traefik to talk with your service
-#       - traefik.enable=true
-#       # Tell Traefik to use port 80
-#       - traefik.http.services.mlassignment-demo-st124088.loadbalancer.server.port=80
-#       # This config you domain name. By default, your subdomain is service_name-st124088
-#       # If you which to change the subdomain name, you uncomment the below configuration
-#       - traefik.http.routers.mlassignment-demo-st124088.rule=Host(`st124088.ml2023.cs.ait.ac.th`)
-#       # Below is for enable SSL.
-#       - traefik.http.routers.mlassignment-demo-st124088.tls=true
-#       - traefik.http.routers.mlassignment-demo-st124088.tls.certresolver=production
-#       - traefik.http.routers.mlassignment-demo-st124088.entrypoints=websecure
-#     # This define network. You would need to keep it like this.
-#     networks:
-#       - default
-#       - traefik_default
+    labels:
+      # Allow Traefik to talk with your service
+      - traefik.enable=true
+      # Tell Traefik to use port 80
+      - traefik.http.services.mlassignment-demo-st124088.loadbalancer.server.port=80
+      # This config you domain name. By default, your subdomain is service_name-st124088
+      # If you which to change the subdomain name, you uncomment the below configuration
+      - traefik.http.routers.mlassignment-demo-st124088.rule=Host(`st124088.ml2023.cs.ait.ac.th`)
+      # Below is for enable SSL.
+      - traefik.http.routers.mlassignment-demo-st124088.tls=true
+      - traefik.http.routers.mlassignment-demo-st124088.tls.certresolver=production
+      - traefik.http.routers.mlassignment-demo-st124088.entrypoints=websecure
+    # This define network. You would need to keep it like this.
+    networks:
+      - default
+      - traefik_default
 
-# # Keep it like this too.
-# networks:
-#   default:
-#   traefik_default:
-#     external: true
+# Keep it like this too.
+networks:
+  default:
+  traefik_default:
+    external: true

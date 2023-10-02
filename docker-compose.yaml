@@ -1,6 +1,6 @@
 version: '3'
 services:
-  dev:
+   dash-demo:
     #command: python app.py
     # command: tail -f /dev/null
     image: mlassignment:a3
