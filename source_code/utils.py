@@ -1,7 +1,7 @@
 import mlflow
 import os
 
-model_name = os.environ['APP_MODEL_NAME']
+model_name = "st124088_model"
 def load_mlflow(stage='Staging'):
     cache_path = os.path.join("models",stage)
     if(os.path.exists(cache_path) == False):

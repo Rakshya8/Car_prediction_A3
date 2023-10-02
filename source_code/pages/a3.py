@@ -16,13 +16,13 @@ app = Dash(__name__, external_stylesheets=external_stylesheets)
 
 # Set paths to the model we are using
 vehicle_df = pd.read_csv('Cars.csv')
-scalar_path = "pages/Model/scaler.model"
+scalar_path = "pages/Model/car-scalar.model"
 brand_fuel = "pages/Model/fuel_encoder.model"
 brand_enc_path = "pages/Model/car-a2-brand_encoder.model"
 
 #Set mlflow tracking uri
-mlflow.set_tracking_uri(os.environ['MLFLOW_TRACKING_URI'])
-model_name = "best_model_st124088"
+mlflow.set_tracking_uri("https://mlflow.cs.ait.ac.th/")
+model_name = "st124088_model"
 model_version = 1
 
 # loading the models
