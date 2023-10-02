@@ -145,17 +145,19 @@ card_predicted_price = dbc.Card([
 card_reason = dbc.Card([
     dbc.CardBody(
         [
-            html.H5(children='Why the A2 Custom Model Excels', style={'text-align': 'center', 'color':'white', 'background-color': '#051C75'}),
-            html.H3("While the model may not achieve superior MSE or R2 scores, it excels in other important ways:", className="card-text", style={"font-weight": "bold"}),
-            html.P("1. **Interpretability:** The custom model offers more interpretable results, aiding in understanding feature impacts.", className="card-text",style={"font-weight": "bold"}),
-            html.P("2. **Customization:** It allows for flexible hyperparameter tuning and experimentation.", className="card-text",style={"font-weight": "bold"}),
-            html.P("3. **Regularization:** Supports various regularization techniques to prevent overfitting.", className="card-text",style={"font-weight": "bold"}),
-            html.P("4. **Cross-Validation:** Utilizes k-fold cross-validation for robust performance estimation.", className="card-text",style={"font-weight": "bold"}),
-            html.P("5. **Educational Value:** Ideal for learning and research purposes, providing valuable insights into ML concepts.", className="card-text",style={"font-weight": "bold"}),
-            html.P("6. **Transparency:** Offers full control and transparency in model implementation.", className="card-text",style={"font-weight": "bold"}),
-            html.P("7. **Feature Engineering:** Encourages domain-specific feature engineering.", className="card-text",style={"font-weight": "bold"}),
-            html.P("8. **Benchmarking:** Useful for benchmarking and comparing against other models.", className="card-text",style={"font-weight": "bold"}),
-            html.P("8. **Use of one hot encoding:** The brands of this model is one hot encoded compared to the previous model which ensures that there is oradinality between any brands.", className="card-text",style={"font-weight": "bold"}),
+            html.H5(children='Why the A3 Custom Model Excels in Classification', style={'text-align': 'center', 'color':'white', 'background-color': '#051C75'}),
+            html.H3("While the A3 Custom Model may not achieve superior classification metrics, it excels in other important ways:", className="card-text", style={"font-weight": "bold"}),
+            html.P("1. **Interpretability:** The custom model offers more interpretable results, aiding in understanding feature impacts in classification tasks.", className="card-text",style={"font-weight": "bold"}),
+            html.P("2. **Customization:** It allows for flexible hyperparameter tuning and experimentation specific to classification problems.", className="card-text",style={"font-weight": "bold"}),
+            html.P("3. **Regularization:** Supports various regularization techniques to prevent overfitting in classification scenarios.", className="card-text",style={"font-weight": "bold"}),
+            html.P("4. **Cross-Validation:** Utilizes k-fold cross-validation for robust performance estimation in classification tasks.", className="card-text",style={"font-weight": "bold"}),
+            html.P("5. **Educational Value:** Ideal for learning and research purposes, providing valuable insights into classification concepts and techniques.", className="card-text",style={"font-weight": "bold"}),
+            html.P("6. **Transparency:** Offers full control and transparency in model implementation for classification challenges.", className="card-text",style={"font-weight": "bold"}),
+            html.P("7. **Feature Engineering:** Encourages domain-specific feature engineering tailored to classification problems.", className="card-text",style={"font-weight": "bold"}),
+            html.P("8. **Benchmarking:** Useful for benchmarking and comparing against other classification models and algorithms.", className="card-text",style={"font-weight": "bold"}),
+            html.P("9. **Use of One-Hot Encoding:** The brands in this model are one-hot encoded, ensuring ordinality between any brands in classification tasks.", className="card-text",style={"font-weight": "bold"}),
+            html.P("10. **Classification of Selling Price:** The model classifies selling price into 4 classes based on equal balanced quartile ranges.", className="card-text",style={"font-weight": "bold"}),
+
         ]
     ),
 ],style={'marginBottom': '20px', 'marginRight': '20px'})
