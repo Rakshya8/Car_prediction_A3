@@ -40,7 +40,7 @@ brand_cats = list(label_car.categories_[0])
 # Getting all fuel values
 fuel_cat = list(fuel_car.classes_)
 num_cols = ['max_power','year','mileage']
-# map value of y to String representation
+# Map numerical values of 'y' to String representations
 y_map = {0: 'Cheap', 1: 'Average', 2: 'Expensive', 3: 'Very expensive'}
 
 #Default values in case of null or negative input
@@ -184,7 +184,7 @@ layout = dbc.Container([
                         ])
                     ])
 ])
-
+# Define a function to get the input features as X
 def get_X(brand, year,max_power, mileage, fuel):
     features = {
         'brand': brand,
@@ -213,7 +213,7 @@ def get_X(brand, year,max_power, mileage, fuel):
     X = one_hot_transform(label_car, X, 'brand')
 
     return X.to_numpy(), features
-
+# Define a function to get the predicted selling price based on X
 def get_y(X):
     return model.predict(X)
 
