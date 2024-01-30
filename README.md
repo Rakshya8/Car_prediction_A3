@@ -1,4 +1,4 @@
-# All_assignments
+# A3 Car Prediction
 A Random Forest Regressor model which predicts the selling price of a car based on the brand. fuel type, max power and its mileage
 A custom made Linear Regression model which predicts the selling price of a car based on the brand. fuel type, max power and its mileage
 A custom Linear Classification model which predicts the class of a seeling price of a car based on the brand. fuel type, max power and its mileage
